@@ -7,7 +7,7 @@ const baySelect = document.getElementById('bay');
 populateUI();
 let ticketPrice = +baySelect.value;
 
-// Save selected movie index and price
+// Save selected bay index and price
 function setBayData(bayIndex, bayPrice) {
   localStorage.setItem('selectedBayIndex', bayIndex);
   localStorage.setItem('selectedBayPrice', bayPrice);
@@ -21,7 +21,7 @@ function updateSelectedCount() {
 
   localStorage.setItem('selectedBays', JSON.stringify(baysIndex));
 
-  //copy selected seats into arr
+  //copy selected bays into arr
   // map through array
   //return new array of indexes
 
@@ -37,7 +37,7 @@ function populateUI() {
   if (selectedBays !== null && selectedBays.length > 0) {
     bays.forEach((bay, index) => {
       if (selectedBays.indexOf(index) > -1) {
-        seat.classList.add('selected');
+        bay.classList.add('selected');
       }
     });
   }
@@ -49,14 +49,14 @@ function populateUI() {
   }
 }
 
-// Movie select event
+// Bay select event
 baySelect.addEventListener('change', (e) => {
   ticketPrice = +e.target.value;
   setBayData(e.target.selectedIndex, e.target.value);
   updateSelectedCount();
 });
 
-// Seat click event
+// Bay click event
 container.addEventListener('click', (e) => {
   if (e.target.classList.contains('bay') && !e.target.classList.contains('occupied')) {
     e.target.classList.toggle('selected');
