@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bays</title>
+  </head>
+  <body>
+    <div class="bay-container">
+      <label>Pick a Floor:</label>
+      <select id="bay">
+        <option value="22">Ground Level ($22/hr)</option>
+        <option value="29">First Floor ($29/hr)</option>
+        <option value="35">Second Floor ($35/hr)</option>
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li>
+        <div class="bay"></div>
+        <medium>N/A</medium>
+      </li>
+
+      <li>
+        <div class="bay selected"></div>
+        <medium>Selected</medium>
+      </li>
+
+      <li>
+        <div class="bay occupied"></div>
+        <medium>Occupied</medium>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="screen"></div>
+      <div class="row">
+        <div class="bay"></div>
+        <div class="bay"></div>
+        <div class="bay"></div>
+        <div class="bay"></div>
+        <div class="bay"></div>
+        <div class="bay"></div>
+        <div class="bay"></div>
+        <div class="bay"></div>
+      </div>
+    </div>
+
+    <p class="text">
+      You have selected <span id="count">0</span> bays for a price of $<span id="total">0</span>
+    </p>
+    <script src="script.js"></script>
+  </body>
+</html>
