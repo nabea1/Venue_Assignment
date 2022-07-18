@@ -16,6 +16,10 @@ body {
   font-weight: bold;
 }
 
+div.bay{
+  text-align: center;
+}
+
 .bay-container {
   margin: 20px 0;
 }
@@ -24,7 +28,7 @@ body {
   background-color: #fff;
   border: 3;
   border-radius: 7px;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 10px;
   padding: 5px 35px 5px 35px;
   -moz-appearance: none;
@@ -39,34 +43,37 @@ body {
 
 .bay {
   background: radial-gradient(circle at 24.1%     68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-  height: 20px;
-  width: 12px;
-  margin: 3px;
-  border-top-left-radius: 1px;
-  border-top-right-radius: 12px;
-  border-bottom-left-radius: 11px;
-  border-bottom-right-radius: 8px;
+  height: 24px;
+  width: 22px;
+  margin: 8px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 2px;
 }
 
 .bay.selected {
   background: linear-gradient(to right, rgb(52, 232, 158), rgb(15, 52, 67));
+  color: white;
 }
 
 .bay.occupied {
-  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: radial-gradient(circle at 0.2% 1.8%, rgb(255, 90, 8) 0%, rgb(88, 0, 0) 100.2%);
+  color: white;
+
 }
 
 .bay:nth-of-type(2) {
-  margin-right: 18px;
+  margin-right: 30px;
 }
 
 .bay:nth-last-of-type(2) {
-  margin-left: 18px;
+  margin-left: 30px;
 }
 
 .bay:not(.occupied):hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(2);
 }
 
 .showcase .bay:not(.occupied):hover {
@@ -100,18 +107,19 @@ body {
 }
 
 .screen {
-  background-color: #0BAB64;
-  height: 70px;
+  background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
+  height: 80px;
   width: 100%;
-  margin: 15px 0;
+  margin: 8px 0;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
 }
 
 p.text {
-  margin: 5px 0;
+  margin: 8px 0;
+  margin-bottom: 25px;
 }
 
 p.text span {
-  color: #6feaf6;
+  color: #3a9679;
 }
